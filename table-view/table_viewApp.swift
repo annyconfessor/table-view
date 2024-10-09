@@ -11,7 +11,8 @@ import SwiftUI
 struct table_viewApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TableView()
         }
     }
 }
+
