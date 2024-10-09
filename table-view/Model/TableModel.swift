@@ -10,5 +10,5 @@ import Foundation
 // MARK: Model
 
 struct TableModel {
-    let names: Array<String> = ["anny", "claudio", "fatima", "izan"]
+    let names: Array<String> = ["Anny", "Cláudio", "Fátima", "Izan", "Edneia", "Cintia", "Cezar", "Paulinho"]
 }
