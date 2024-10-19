@@ -2,7 +2,7 @@
 //  table_viewApp.swift
 //  table-view
 //
-//  Created by Anny Caroliny on 08/10/24.
+//  Created by Anny Caroliny on 17/10/24.
 //
 
 import SwiftUI
@@ -15,4 +15,3 @@ struct table_viewApp: App {
         }
     }
 }
-

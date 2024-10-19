@@ -10,14 +10,14 @@ import SwiftUI
 // MARK: View Model
 
 class TableViewModel: ObservableObject {
-    var importModel = TableModel()
-    var names: [String] = [""]
+    @Published var importModel = TableModel()
+    var results: [String: Any] = [:]
     
     // MARK: Intent to get names from model
     
     init() {
         self.importModel = TableModel()
-        self.names = importModel.names
+        self.results = importModel.fetchData
     }
     
     // MARK: Intent do print names
