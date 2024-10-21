@@ -26,6 +26,7 @@
 		B907DC5D2CC6D0910055B998 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B907DC492CC6D0910055B998 /* Poppins-SemiBoldItalic.ttf */; };
 		B907DC5E2CC6D0910055B998 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B907DC4A2CC6D0910055B998 /* Poppins-Thin.ttf */; };
 		B907DC5F2CC6D0910055B998 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B907DC4B2CC6D0910055B998 /* Poppins-ThinItalic.ttf */; };
+		B907DC642CC6DEB80055B998 /* baby-yoda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B907DC632CC6DEB80055B998 /* baby-yoda.jpg */; };
 		B9430DB52CC178AC00B7E9EB /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9430DB42CC178AC00B7E9EB /* TableModel.swift */; };
 		B9430DB82CC17BF400B7E9EB /* table_viewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9430DB72CC17BF400B7E9EB /* table_viewApp.swift */; };
 		B9430DBB2CC28BFE00B7E9EB /* Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9430DBA2CC28BFE00B7E9EB /* Serialization.swift */; };
@@ -57,6 +58,7 @@
 		B907DC4A2CC6D0910055B998 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		B907DC4B2CC6D0910055B998 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
 		B907DC602CC6D23E0055B998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B907DC632CC6DEB80055B998 /* baby-yoda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "baby-yoda.jpg"; sourceTree = "<group>"; };
 		B9430DB42CC178AC00B7E9EB /* TableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
 		B9430DB72CC17BF400B7E9EB /* table_viewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = table_viewApp.swift; sourceTree = "<group>"; };
 		B9430DBA2CC28BFE00B7E9EB /* Serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serialization.swift; sourceTree = "<group>"; };
@@ -103,6 +105,21 @@
 				B907DC4B2CC6D0910055B998 /* Poppins-ThinItalic.ttf */,
 			);
 			path = Poppins;
+			sourceTree = "<group>";
+		};
+		B907DC612CC6DDB70055B998 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		B907DC622CC6DE8D0055B998 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B907DC632CC6DEB80055B998 /* baby-yoda.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		B9430DB32CC1785800B7E9EB /* Models */ = {
@@ -198,6 +215,7 @@
 		B97892D22CC176F400B17D72 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B907DC612CC6DDB70055B998 /* Image */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -205,6 +223,7 @@
 		B97892D32CC1770B00B17D72 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B907DC622CC6DE8D0055B998 /* Images */,
 				B9430DBE2CC6CCEF00B7E9EB /* Fonts */,
 			);
 			path = Assets;
@@ -288,6 +307,7 @@
 				B907DC4F2CC6D0910055B998 /* Poppins-BlackItalic.ttf in Resources */,
 				B907DC5C2CC6D0910055B998 /* Poppins-SemiBold.ttf in Resources */,
 				B95AEA4D2CB5B74C00FC8247 /* Preview Assets.xcassets in Resources */,
+				B907DC642CC6DEB80055B998 /* baby-yoda.jpg in Resources */,
 				B95AEA4A2CB5B74C00FC8247 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
