@@ -24,18 +24,19 @@ struct TableView: View {
             HStack() {
                 Text("Menu icon")
                 Text("Logo")
-                Text("Search")
+                Text("Settings")
             }.padding(.top, 10)
-            
+            .font(Font.custom("Poppins-Medium", size: 20))
+            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
             
             VStack() {
                 ForEach(Array(items.keys), id: \.self) { item in
                     if items[item] is [String: Any] {
-                        Section(header: Text(item).font(.title)) {
+                        Section(header: Text(item).font(Font.custom("Poppins-SemiBold", size: 30))) {
                             VStack() {
                                 if let currencies = items[item] as? [String: Any] {
                                     ForEach(Array(currencies.keys), id: \.self) { currencie in
-                                        Text(currencie).font(.headline)
+                                        Text(currencie).font(Font.custom("Poppins-Italic", size: 30))
                                     }
                                 }
                             }
@@ -49,7 +50,7 @@ struct TableView: View {
             minHeight: 0,
             maxHeight: .infinity,
             alignment: .top
-        ).background(Color(hex: 0x202526 )) // 0x == #
+        ).background(Color(hex: 0xF7F7FA ))
     }
 }
 
