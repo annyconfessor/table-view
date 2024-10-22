@@ -8,31 +8,30 @@
 import SwiftUI
 
 struct BalanceView: View {
+    @Binding var stock: String
+    
     var body: some View {
-        
-        ZStack() {
-            Image("mesh-gradient")
-                .resizable()
-                .scaledToFit()
-                .edgesIgnoringSafeArea(.top)
-            Image("blur")
-                .resizable()
-                .scaledToFit()
-                .edgesIgnoringSafeArea(.top)
-            
-            VStack(alignment: .leading) {
-                Text("Current Balance").font(Font.custom("Poppins-Regular", size: 18))
-                HStack() {
-                    Text("$87,430.12").font(Font.custom("Poppins-Bold", size: 22))
-                    Text("10.2%").font(Font.custom("Poppins-SemiBold", size: 14))
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                }
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-            }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity).padding()
-        }.frame(width: 300, height: 100)
+        VStack {
+            HStack {
+                Image(systemName: "brazilianrealsign.square")
+                Text("\(stock)").font(Font.custom("Poppins-Regular", size: 18))
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.leading)
+            Spacer()
+                .frame(height: 30)
+            VStack {
+                Text("130499.2").font(Font.custom("Poppins-Bold", size: 24))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 20)
+                Text("-0.22").font(Font.custom("Poppins-SemiBold", size: 15))
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                    .padding(.leading, 20)
+            }
+        }.foregroundColor(.white)
+        .frame(maxWidth: 180, maxHeight: 160)
+        .background(Color(hex: 0x009688))
+//        .background(Color(hex: 0xff8367))
+        .cornerRadius(20)
     }
-}
-
-#Preview {
-    BalanceView()
 }

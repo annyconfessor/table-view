@@ -10,6 +10,7 @@ import SwiftUI
 struct TableView: View {
     @ObservedObject var viewModel = TableViewModel()
     var items: [String: Any] = [:]
+    @State private var stock = "IBOVESPA"
     
     // init() garante que self já vai estar disponivel assim que a classe iniciar
     init() {
@@ -22,7 +23,7 @@ struct TableView: View {
             
             VStack {
                 HeaderView()
-                BalanceView()
+                BalanceView(stock: $stock)
                 
                 // rates componente
                 VStack() {
