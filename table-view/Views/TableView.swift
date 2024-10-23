@@ -14,11 +14,8 @@ func getStocks(from results: [String: Any]) -> [String: Any] {
 struct TableView: View {
     @ObservedObject var viewModel = TableViewModel()
     var items: [String: Any] = [:]
-//    @State private var stockName: String = "IBOVESPA"
     @State private var points: Double = 9292.93
     @State private var variation: Double = 2.00
-    @State private var cardColor1: Int = 0x009688
-    @State private var cardColor2: Int = 0xff8367
     
     // init() garante que self já vai estar disponivel assim que a classe iniciar
     init() {
@@ -34,6 +31,7 @@ struct TableView: View {
                 
                 HeaderView()
                 
+                //Caroussel component
                 HStack {
                     ForEach(itemsKeys, id: \.self) { item in
                         let results = items[item] as? [String:Any] ?? [:]
@@ -45,18 +43,23 @@ struct TableView: View {
                             let eachStock = stocks["\(name)"] as? [String: Any] ?? [:]
                             @State var stockPoints = eachStock["points"] as? Double ?? 0.0
                             @State var stockVariation = eachStock["variation"] as? Double ?? 0.0
+                            let colors = [0x009688, 0xff8367, 0x00ffd00, 0xffff] as? [Int] ?? [0x0000]
                             
-                            BalanceView(
-                                stock: $stockName,
-                                points: $stockPoints,
-                                variation: $stockVariation,
-                                cardColor: $cardColor1)
+                            ForEach(colors, id: \.self) { color in
+                                @State var cardColor = color
+                                
+                                BalanceView(
+                                    stock: $stockName,
+                                    points: $stockPoints,
+                                    variation: $stockVariation,
+                                    cardColor: $cardColor)
+                            }
+                            
                         }
                     }
                 }
                 
-                
-                // rates componente
+                // rates component
                 VStack() {
                     ForEach(Array(items.keys), id: \.self) { item in
                         if items[item] is [String: Any] {
