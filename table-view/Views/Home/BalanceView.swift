@@ -9,6 +9,9 @@ import SwiftUI
 
 struct BalanceView: View {
     @Binding var stock: String
+    @Binding var points: Double
+    @Binding var variation: Double
+    @Binding var cardColor: Int
     
     var body: some View {
         VStack {
@@ -21,17 +24,16 @@ struct BalanceView: View {
             Spacer()
                 .frame(height: 30)
             VStack {
-                Text("130499.2").font(Font.custom("Poppins-Bold", size: 24))
+                Text(String(format: "%0.2f", points)).font(Font.custom("Poppins-Bold", size: 24))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 20)
-                Text("-0.22").font(Font.custom("Poppins-SemiBold", size: 15))
+                Text(String(format: "%0.2f", variation)).font(Font.custom("Poppins-SemiBold", size: 15))
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                     .padding(.leading, 20)
             }
         }.foregroundColor(.white)
         .frame(maxWidth: 180, maxHeight: 160)
-        .background(Color(hex: 0x009688))
-//        .background(Color(hex: 0xff8367))
+        .background(Color(hex: cardColor))
         .cornerRadius(20)
     }
 }

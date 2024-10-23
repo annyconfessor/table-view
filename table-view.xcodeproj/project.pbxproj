@@ -78,6 +78,7 @@
 		B95AEA4C2CB5B74C00FC8247 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B95AEA552CB5D77400FC8247 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		B97892CF2CC175F000B17D72 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B9A0FB092CC9376100CAA88B /* code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = code.swift; path = ../../../code.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +216,7 @@
 				B954AEFA2CC7E33900A2E95D /* Home */,
 				B97892D22CC176F400B17D72 /* Shared */,
 				B95AEA472CB5B74B00FC8247 /* TableView.swift */,
+				B9A0FB092CC9376100CAA88B /* code.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

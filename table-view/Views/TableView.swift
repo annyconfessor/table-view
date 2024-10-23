@@ -7,10 +7,18 @@
 
 import SwiftUI
 
+func getStocks(from results: [String: Any]) -> [String: Any] {
+    return results["stocks"] as? [String:Any] ?? [:]
+}
+
 struct TableView: View {
     @ObservedObject var viewModel = TableViewModel()
     var items: [String: Any] = [:]
-    @State private var stock = "IBOVESPA"
+//    @State private var stockName: String = "IBOVESPA"
+    @State private var points: Double = 9292.93
+    @State private var variation: Double = 2.00
+    @State private var cardColor1: Int = 0x009688
+    @State private var cardColor2: Int = 0xff8367
     
     // init() garante que self já vai estar disponivel assim que a classe iniciar
     init() {
@@ -22,8 +30,31 @@ struct TableView: View {
         ZStack(alignment: .top) {
             
             VStack {
+                let itemsKeys = Array(items.keys)
+                
                 HeaderView()
-                BalanceView(stock: $stock)
+                
+                HStack {
+                    ForEach(itemsKeys, id: \.self) { item in
+                        let results = items[item] as? [String:Any] ?? [:]
+                        let stocks = getStocks(from: results)
+                        
+                        let stocksArr = Array(stocks.keys)
+                        ForEach(stocksArr, id: \.self) { name in
+                            @State var stockName: String = name
+                            let eachStock = stocks["\(name)"] as? [String: Any] ?? [:]
+                            @State var stockPoints = eachStock["points"] as? Double ?? 0.0
+                            @State var stockVariation = eachStock["variation"] as? Double ?? 0.0
+                            
+                            BalanceView(
+                                stock: $stockName,
+                                points: $stockPoints,
+                                variation: $stockVariation,
+                                cardColor: $cardColor1)
+                        }
+                    }
+                }
+                
                 
                 // rates componente
                 VStack() {

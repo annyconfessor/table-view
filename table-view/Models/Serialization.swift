@@ -184,7 +184,6 @@ func serialization() -> [String: Any] {
         do {
             var data: [String: Any] = [:]
             if let jsonDict = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
-                print("Dic: \(jsonDict)")
                 data = jsonDict
             }
             return data
